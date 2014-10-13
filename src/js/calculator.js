@@ -120,6 +120,7 @@
             dataTable = [];
             $("#operations").html(template(dataTable));
             $("#result").html('');
+            i = 0;
         }
 
         reset();
