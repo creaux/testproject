@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <!-- build:css css/app.min.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="src/vendor/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+    </head>
+    <body style="padding-top:40px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-5">
+                    <form role="form" class="form-inline" id="form-calc">
+                        <div class="form-group" style="margin-bottom:20px;">
+                            <select id="type" class="form-control">
+                                <option>apply</option>
+                            </select>
+                            <input type="number" name="ourNumber"  placeholder="Enter a number" class="form-control" id="number"  />
+                            <button class="btn btn-default" id="step" type="button">Add Step</button>
+                        </div>
+                        <div id="operations" style="margin-bottom:20px;"></div>
+                        <button type="button" class="btn btn-primary" id="calculate">Calculate</button>
+                        <button type="button" class="btn btn-secondary" id="reset">Reset</button>
+                        <div style="font-size:24px; font-weight: bold; margin-top:20px;">Result: <span id="result"></span></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/template" class="template">
+            <table class="table">
+                <% _.each(data, function (item) { %>
+                <tr>
+                    <td><%- item.id %></td>
+                    <td><%- item.type %></td>
+                    <td><%- item.number %></td>
+                </tr>
+                <% }); %>
+            </table>
+        </script>
+
+        <!-- build:js js/app.min.js -->
+        <!-- bower:js -->
+        <script src="src/vendor/zepto/zepto.js"></script>
+        <script src="src/vendor/underscore/underscore.js"></script>
+        <!-- endbower -->
+        <script src="src/js/calculator.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

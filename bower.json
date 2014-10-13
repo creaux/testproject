@@ -1,0 +1,24 @@
+{
+  "name": "testproject",
+  "version": "0.0.1",
+  "authors": [
+    "Petr Juna <petr.juna@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "zepto": "~1.1.4",
+    "underscore": "~1.7.0"
+  }
+}
